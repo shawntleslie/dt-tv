@@ -12,7 +12,7 @@ div[role="main"] {
 
     .current-episode-inner {
 
-      video {
+      > div.video {
         width: 600px;
         margin: 2em 0;
         float: left;

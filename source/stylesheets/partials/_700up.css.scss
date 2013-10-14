@@ -48,7 +48,7 @@ div[role="main"] {
 
     .current-episode-inner {
 
-      video {
+      > div.video {
         width: 600px;
         height: 338px;
         margin: 2em auto;

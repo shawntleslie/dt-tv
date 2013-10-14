@@ -47,15 +47,44 @@
     <%= javascript_include_tag  "plugins" %>
     <%= javascript_include_tag  "all" %>
 
+    <!-- begin GA -->
+    <script type="text/javascript">
 
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-    <script>
-        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-        e.src='//www.google-analytics.com/analytics.js';
-        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-        ga('create','UA-XXXXX-X');ga('send','pageview');
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-30039-1']);
+      _gaq.push(['_setDomainName', 'dtelepathy.dev']);
+      _gaq.push(['_addIgnoredRef', 'www.slidedeck.com']);
+      _gaq.push(['_addIgnoredRef', 'developers.slidedeck.com']);
+      _gaq.push(['_addIgnoredRef', 'www.arrrows.com']);
+      _gaq.push(['_setAllowLinker', true]);
+      _gaq.push(['_trackPageview']);
+      
+      // Cohorts Setup
+      var cohort_name = document.location.href.match(/cohort_name=[a-zA-Z0-9\-_]+/g);
+      if( cohort_name ){
+        _gaq.push(['_setCustomVar', 1, 'Cohort Name', cohort_name[0].split('=')[1], 1]);
+      }
+      var cohort_year = document.location.href.match(/cohort_year=[a-zA-Z0-9\-_]+/g);
+      if( cohort_year ){
+        _gaq.push(['_setCustomVar', 2, 'Cohort Year', cohort_year[0].split('=')[1], 1]);
+      }
+      var cohort_month = document.location.href.match(/cohort_month=[a-zA-Z0-9\-_]+/g);
+      if( cohort_month ){
+        _gaq.push(['_setCustomVar', 3, 'Cohort Month', cohort_month[0].split('=')[1], 1]);
+      }
+      var cohort_variation = document.location.href.match(/cohort_variation=[a-zA-Z0-9\-_]+/g);
+      if( cohort_variation ){
+        _gaq.push(['_setCustomVar', 4, 'Cohort Variation', cohort_variation[0].split('=')[1], 1]);
+      }
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        // ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
     </script>
+    <!-- end GA -->
   </body>
 </html>
