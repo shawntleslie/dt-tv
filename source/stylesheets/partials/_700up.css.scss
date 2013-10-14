@@ -20,10 +20,8 @@ a {
 header {
   height: 6.25em;
 
-  h1 {
-    a {
-      margin: .45em 0 0 2em;
-    }
+  a#logo {
+    margin: 1.5em 0 0 6em;
   }
   a.follow {
     height: 52px;
