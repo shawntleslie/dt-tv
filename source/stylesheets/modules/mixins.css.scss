@@ -1,1 +1,53 @@
-// Mixins
+/**********************************
+  TYPE
+***********************************/
+
+$sans-serif: "Source Sans Pro", Helvetica-Neue, Helvetica, sans-serif;
+$serif: Merriweather, georgia, serif;
+
+
+/**********************************
+  COLORS
+***********************************/
+
+$body-text: #9c9fa2;
+$link: #bfc3c6;
+$strong-text: #605f61;
+$headline: #ef9a4a;
+$twitter-blue: #359bf7;
+
+.container {
+  width: 92%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hidden {
+  display: none;
+}
+
+.clearfix {
+  zoom: 1;
+    &:before, &:after { content: ""; display: table; }
+    &:after { clear: both; }
+}
+
+* { box-sizing: border-box; }
+
+@mixin border-radius($radius) {
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+//Transitions - USAGE - @include transition(opacity, 0.5s);
+@mixin transition($property, $duration, $ms: false) {
+  -webkit-transition: $property $duration ease-in-out;
+  -moz-transition: $property $duration ease-in-out;
+  -o-transition: $property $duration ease-in-out;
+  @if ($ms) {
+    -ms-transition: $property $duration ease-in-out;
+  }
+  transition: $property $duration ease-in-out;
+}

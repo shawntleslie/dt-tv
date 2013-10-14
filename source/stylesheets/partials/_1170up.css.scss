@@ -1,5 +1,71 @@
-// 1170 and up
+.hero-img {
+  height: 39.0625em;
+}
 
-body {
-  background: aqua;
+div[role="main"] {
+
+  .current-episode {
+    width: 85%;
+    min-width: 73.125em;
+    margin: 2em auto;
+    overflow: hidden;
+
+    .current-episode-inner {
+
+      video {
+        width: 600px;
+        margin: 2em 0;
+        float: left;
+      }
+
+      .video-meta {
+        color: #fff;
+        text-align: left;
+        width: 48%;
+        float: left;
+        padding-left: 5%;
+        margin-top: 1.5em;
+
+        p.date {
+          color: #fff;
+        }
+        h1 {
+
+          a {
+
+          }
+        }
+        p.episode-summary {
+          font-size: 1.25em;
+          line-height: 1.75em;
+        }
+        a {
+          color: #fff;
+
+          i {
+
+          }
+        }
+
+      }
+    }
+  }
+ /* .show-notes {
+    width: 37.5em;
+    margin: 2em 0;
+    padding: 1em 2em 2em;
+
+    h2 {
+
+    }
+    a {
+
+    }
+    p {
+
+    }
+    h3 {
+
+    }
+  }*/
 }

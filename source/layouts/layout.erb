@@ -8,29 +8,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <%= stylesheet_link_tag "style" %>
-    <%= javascript_include_tag  "all" %>
+    <script src="javascripts/vendor/modernizr-2.6.2.min.js"></script>
+
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:700,600|Merriweather:400,700' rel='stylesheet' type='text/css'>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
   </head>
   <body class="<%= page_classes %>">
+    <div class="hero-img"></div>
     <header>
       <h1><a href="#">Dt tv</a></h1>
-      <a class="follow" href="http://twitter.com/dt_tv">@DT_tv</a>
+      <a class="follow" href="http://twitter.com/dt_tv"><i class="icon-twitter"></i> @DT_tv</a>
     </header>
 
-    <%= yield %>
+    <div role="main">
 
-    <footer>
-      <p>&copy; 2013 <a href="#">Digital Telepathy</a></p>
-      <ul>
-        <li><a href="#">Filament</a></li>
-        <li><a href="#">Betterment Blog</a></li>
-        <li><a href="#">Contact</a></li>
+      <%= yield %>
+
+      <div class="show-meta clearfix container">
+        <h4>What is DT tv?</h4>
+        <p>Think of this show like your design industry Happy Hour. We'll be talking about anything you might find yourself talking about over drink at web conferences, breweries or your after work pub of choice. Tweet us <a href="http://twitter.com/DT_tv">@DT_tv</a> to let us know what you think or suggest topics for the show.</p>
+      </div>
+
+    </div><!-- End role=main -->
+
+    <footer class="clearfix">
+      <div class="footer-inner">
+        <p>&copy; 2013 <a href="#">Digital Telepathy</a></p>
+        <ul>
+          <li><a href="#">Filament</a></li>
+          <li><a href="#">Betterment Blog</a></li>
+          <li><a href="#">Contact</a></li>
+      </div>
     </footer>
 
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
-    <script src="js/plugins.js"></script>
-    <script src="js/main.js"></script>
+    <script>window.jQuery || document.write('<script src="javascripts/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+    <%= javascript_include_tag  "plugins" %>
+    <%= javascript_include_tag  "all" %>
+
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>

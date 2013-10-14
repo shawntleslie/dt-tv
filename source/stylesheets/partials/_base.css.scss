@@ -1,5 +1,215 @@
-// Base
-
+html {
+  -webkit-font-smoothing: antialiased;
+}
 body {
-  background: red;
+  font-size: 1em;
+  font-family: $sans-serif;
+  color: $body-text;
+  margin: 0;
+  padding: 0;
+  background: #f4f7f9;
+}
+
+a {
+  text-decoration: none;
+  color: $headline;
+  font-weight: 700;
+
+
+}
+
+h1 { font-size: 3em; }
+h2 { font-size: 2.5em; text-transform: capitalize; color: $headline; font-weight: 400; }
+h3 { font-size: 1.625em; text-transform: uppercase; color: $body-text; }
+h4 {}
+
+h1, h2, h3, h4, h5 {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+
+
+header {
+  margin: 0;
+  height: 5em;
+  width: 100%;
+
+  h1 {
+    margin: 0;
+
+    a {
+      color: $headline;
+      background: image_url("logo.png") 0 0 no-repeat;
+      width: 66px;
+      height: 71px;
+      display: block;
+      text-indent: -9999px;
+      float: left;
+      margin: .1em 0 0 .5em;
+    }
+  }
+  a.follow {
+    display: block;
+    float: right;
+    height: 40px;
+    width: 150px;
+    line-height: 38px;
+    font-size: 18px;
+    background: $twitter-blue;
+    @include border-radius(3px);
+    color: #fff;
+    text-align: center;
+    margin: 1.15em .75em 0 0;
+
+    i {
+      font-size: 32px;
+      vertical-align: middle;
+    }
+  }
+}
+
+div[role="main"] {
+
+  .current-episode {
+    background: #fff;
+    padding-bottom: 3em;
+
+
+
+    .current-episode-inner {
+      margin: 2em 0;
+
+      video {
+        width: 320px;
+        height: 180px;
+        background: #999;
+        margin: 0 auto;
+        display: block;
+      }
+
+      .video-meta {
+        text-align: center;
+
+        p.date {
+          color: $strong-text;
+          font-family: $serif;
+          font-weight: 700;
+          margin: 1em 0 0;
+        }
+        h1 {
+          margin: 0 0 .5em;
+
+          a {
+            color: $headline;
+          }
+        }
+        p.episode-summary {
+          line-height: 1.75em;
+          font-family: $serif;
+          margin: 0 0 2em;
+        }
+        a {
+          font-size: 1.125em;
+          color: $link;
+          text-transform: uppercase;
+
+          i {
+            font-size: 30px;
+            vertical-align: middle;
+            margin-right: .25em;
+            color: $headline;
+          }
+        }
+
+      }
+    }
+
+
+
+  }
+  #show-notes-container {
+    position: relative;
+    overflow: hidden;
+    @include transition(height,0.25s, ease-in-out);
+  }
+  .show-notes {
+    background: #fff;
+    padding: 2em 1em;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: opacity 0.5s ease-in-out, visibility 0.5s linear 0.5s;
+    -moz-transition: opacity 0.5s ease-in-out, visibility 0.5s linear 0.5s;
+    -o-transition: opacity 0.5s ease-in-out, visibility 0.5s linear 0.5s;
+    transition: opacity 0.5s ease-in-out, visibility 0.5s linear 0.5s;
+
+    &.show {
+      visibility: visible;
+      opacity: 1;
+      -webkit-transition: opacity 0.5s ease-in-out, visibility 0.5s linear 0s;
+      -moz-transition: opacity 0.5s ease-in-out, visibility 0.5s linear 0s;
+      -o-transition: opacity 0.5s ease-in-out, visibility 0.5s linear 0s;
+      transition: opacity 0.5s ease-in-out, visibility 0.5s linear 0s;
+    }
+
+    h2 {
+      text-transform: capitalize;
+      font-weight: 600;
+      border-bottom: 3px solid $headline;
+    }
+    a {
+      font-size: 1.125em;
+      font-weight: 700;
+      color: $headline;
+      font-family: $serif;
+    }
+    p {
+      font-family: $serif;
+      margin: .5em 0 1.5em;
+      line-height: 1.733333333em;
+
+      a {
+        font-size: 1em;
+      }
+    }
+    h3 {
+
+    }
+  }
+
+  .show-meta {
+    text-align: center;
+    margin: 2em auto 5em;
+
+    h4 {
+      color: $strong-text;
+    }
+    p {
+      font-family: $serif;
+      font-size: 1.25em;
+      line-height: 1.625em;
+    }
+  }
+
+}
+
+footer {
+  background: #333;
+  text-align: center;
+  margin-top: 3em;
+
+  p {
+
+  }
+  ul {
+
+
+    li {
+      list-style: none;
+
+      a {
+
+      }
+    }
+  }
 }

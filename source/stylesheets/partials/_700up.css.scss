@@ -1,4 +1,131 @@
-// 700 and up
-body {
-  background: blue;
+a {
+  @include transition(color, .2s);
+
+    &:hover, &:active {
+      color: darken($headline, 20%);
+    }
 }
+
+.hero-img {
+  width: 100%;
+  background: image_url("dt-office.jpg") top center no-repeat;
+  background-size: cover;
+  height: 860px;
+  position: absolute;
+  z-index: -1;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  height: 6.25em;
+
+  h1 {
+    a {
+      margin: .45em 0 0 2em;
+    }
+  }
+  a.follow {
+    height: 52px;
+    line-height: 50px;
+    font-size: 21px;
+    width: 200px;
+    margin: 1.5em 2em 0 0;
+    @include transition(background, .15s);
+
+    &:hover, &:active {
+      background: darken($twitter-blue, 7.5%);
+    }
+  }
+}
+
+div[role="main"] {
+
+  .current-episode {
+    width: 90%;
+    margin: 2em auto;
+    overflow: hidden;
+    background: transparent;
+
+
+    .current-episode-inner {
+
+      video {
+        width: 600px;
+        height: 338px;
+        margin: 2em auto;
+      }
+
+      .video-meta {
+        color: #fff;
+
+        p.date {
+          color: #fff;
+        }
+        h1 {
+
+          a {
+
+          }
+        }
+        p.episode-summary {
+          /*padding: 0 2em;*/
+        }
+        a {
+          color: #fff;
+          @include transition(color, .15s);
+
+          &:hover, &:active {
+            color: $headline;
+          }
+
+          i {
+
+          }
+        }
+      }
+    }
+  }
+  .show-notes {
+    width: 37.5em;
+    margin: 2em auto;
+    padding: .25em 3em 2em;
+
+    h2 {
+
+    }
+    a {
+
+    }
+    p {
+
+    }
+    h3 {
+
+    }
+  }
+}
+
+footer {
+
+  .footer-inner {
+    width: 85%;
+    margin: 0 auto;
+
+    p {
+      float: left;
+    }
+    ul {
+      float: right;
+
+      li {
+        display: inline;
+        margin: 0 1em;
+
+        a {
+
+          }
+        }
+      }
+    }
+  }

@@ -1,17 +1,33 @@
 ---
-title: Welcome to Middleman
+title: Welcome to DT TV
 ---
-      <section class="current-episode">
-        <div class="current-episode-inner container">
-          <video></video>
-          <div class="video-meta">
+      <section class="current-episode clearfix">
+        <div class="current-episode-inner">
+          <video class="clearfix">
+
+          </video>
+          <div class="video-meta container">
             <p class="date">October 15, 2013</p>
             <h1><a href="#">Episode 1</a></h1>
-            <p class="episode-summary">uspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere. Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet.</p>
-            <a href="#"><i class="#">Show Notes</i></a>
+            <p class="episode-summary">Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere. Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet.</p>
+            <a href="#" id="notes" data-default-text="Show Notes" data-hidden-text="Hide Notes"><i class="icon-file-text-alt"></i> <span>Show Notes</span></a>
           </div>
         </div>
-
+        <div class="clearfix"></div>
+        <div id="show-notes-container">
+          <div class="show-notes">
+            <h2>Show Notes</h2>
+            <a href="http://googlepress.blogspot.com/2013/09/calico-announcement.html">Google Calico</a>
+            <p>Google's latest moonshot to take on death.</p>
+            <a href="http://mapdive.weareinstrument.com">MapDive</a>
+            <p>Awesome WebGL & THREE.js browser-based wingsuit game you have to checkout.</p>
+            <a href="http://pitchfork.com/features/cover-story/reader/janelle-monae/">Pitchfork - Janelle Monae</a>
+            <p>Non-nannoying Y-Axis animations to bring an editorial article to life. See also: <a href="http://www.washingtonpost.com/wp-srv/special/local/the-perils-of-great-falls/">WaPo Article</a> &amp; <a href="http://www.nytimes.com/projects/2012/snow-fall/#/?part=tunnel-creek">NYT Article</a></p>
+            <h3>Tools</h3>
+            <a href="http://jumpzero.com/frank/">Frank De Loupe</a>
+            <p>Color pick all the things. Instantly added to foreground in Photoshop and Hex or RBG code added to your clipboard.</p>
+            <a href="https://trello.com/">Trello</a>
+            <p>Organize anything easily with groups via all your devices.</p>
+          </div>
+        </div>
       </section>
-
-      <%= link_to "Read Online Documentation", "http://middlemanapp.com/" %>
