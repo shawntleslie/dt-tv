@@ -1,3 +1,9 @@
+activate :blog do |blog|
+  blog.permalink = "episodes/:year/:month/:day/:title.html"
+  blog.summary_separator = /READMORE/
+  blog.layout = "episode_layout"
+end
+
 ###
 # Compass
 ###
