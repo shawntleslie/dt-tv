@@ -10,7 +10,7 @@ a {
   width: 100%;
   background: image_url("dt-office.jpg") top center no-repeat;
   background-size: cover;
-  height: 860px;
+  height: 65em;
   position: absolute;
   z-index: -1;
   margin: 0;
@@ -23,27 +23,43 @@ header {
   a#logo {
     margin: 1.5em 0 0 6em;
   }
-  a.follow {
-    height: 52px;
-    line-height: 50px;
-    font-size: 21px;
-    width: 200px;
-    margin: 1.5em 2em 0 0;
-    @include transition(background, .15s);
+  .connect {
+    margin-top: 2.75em;
 
-    &:hover, &:active {
-      background: darken($twitter-blue, 7.5%);
+    a.follow {
+      margin-top: 0;
+      margin-right: 2em;
+      @include transition(background, .15s);
+
+      &:hover, &:active {
+        background: darken($twitter-blue, 7.5%);
+      }
     }
   }
 }
 
 div[role="main"] {
 
+  h1 {
+    text-align: center;
+    color: #fff;
+    font-size: 3.5em;
+
+  }
+  p.sub-headline {
+    font-size: 2em;
+    color: $headline;
+    margin-top: 0;
+    text-align: center;
+    padding: 0 2em;
+  }
+
   .current-episode {
     width: 90%;
     margin: 2em auto;
     overflow: hidden;
     background: transparent;
+    padding-top: 0;
 
 
     .current-episode-inner {

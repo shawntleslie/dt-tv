@@ -18,8 +18,8 @@ a {
 
 }
 
-h1 { font-size: 3em; }
-h2 { font-size: 2.5em; text-transform: capitalize; color: $headline; font-weight: 400; }
+h1 { font-size: 3.5em; color: #fff; }
+h2 { font-size: 3em; color: $headline; font-weight: 400; }
 h3 { font-size: 1.625em; text-transform: uppercase; color: $body-text; }
 h4 {}
 
@@ -36,7 +36,7 @@ header {
   width: 100%;
 
   a#logo {
-    margin: 0;
+    margin: 1em 0 0;
     color: $headline;
     background: image_url("logo.png") 0 0 no-repeat;
     width: 66px;
@@ -46,36 +46,71 @@ header {
     float: left;
     margin: .1em 0 0 .5em;
   }
-  a.follow {
-    display: block;
+  .connect {
+    width: 75%;
     float: right;
-    height: 40px;
-    width: 150px;
-    line-height: 38px;
-    font-size: 18px;
-    background: $twitter-blue;
-    @include border-radius(3px);
-    color: #fff;
-    text-align: center;
-    margin: 1.15em .75em 0 0;
+    text-align: right;
+    margin-top: 1.5em;
 
-    i {
-      font-size: 32px;
-      vertical-align: middle;
+
+    .yt-sub-wrap {
+      margin-top: .5em;
+      display: inline-block;
+
+      .yt-sub {
+
+      }
+    }
+    a.follow {
+      display: inline-block;
+      float: right;
+      height: 40px;
+      width: 17%;
+      max-width: 150px;
+      line-height: 38px;
+      font-size: 18px;
+      background: $twitter-blue;
+      @include border-radius(3px);
+      color: #fff;
+      text-align: center;
+      margin: 0 .75em 0 3.5%;
+
+      i {
+        font-size: 32px;
+        vertical-align: middle;
+      }
     }
   }
 }
 
 div[role="main"] {
 
+  h1 {
+    color: #fff;
+    text-transform: none;
+    text-align: center;
+    margin-bottom: .2em;
+    padding: 0 5%;
+    color: $strong-text;
+    font-size: 2.25em;
+  }
+  p.sub-headline {
+    font-size: 1.5em;
+    text-align: center;
+    color: $headline;
+    margin-top: 0;
+    padding: 0 5%;
+
+  }
+
   .current-episode {
     background: #fff;
+    padding-top: 2em;
     padding-bottom: 3em;
 
-
-
     .current-episode-inner {
-      margin: 2em 0;
+      margin: 0;
+      overflow: hidden;
 
       > div.video {
         width: 320px;
@@ -94,9 +129,9 @@ div[role="main"] {
           font-weight: 700;
           margin: 1em 0 0;
         }
-        h1 {
+        h2 {
           margin: 0 0 .5em;
-          color: $headline;
+
 
           a {
             color: $headline;
