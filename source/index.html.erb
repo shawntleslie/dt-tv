@@ -31,3 +31,13 @@ title: Welcome to DT TV
           </div>
         </div>
       </section>
+
+
+      <% page_articles.each_with_index do |article, i| %>
+        <p class="date"><%= article.date.strftime('%b %e %Y') %></p>
+        <h2><%= link_to article.title, article %></h2>
+        <!-- use article.summary(250) if you have Nokogiri available to show just
+        the first 250 characters -->
+        <%= article.summary %>
+        <%= link_to 'Read more…', article %>
+      <% end %>

@@ -1,8 +1,14 @@
+activate :directory_indexes
 activate :blog do |blog|
-  blog.permalink = "episodes/:year/:month/:day/:title.html"
-  blog.summary_separator = /READMORE/
+  blog.sources = "episodes/:year-:month-:day-:title.html"
   blog.layout = "episode_layout"
+  blog.summary_separator = /(READMORE)/
+  blog.tag_template = "tag.html"
+  blog.calendar_template = "calendar.html"
+  # blog.per_page = 10
 end
+
+page "/feed.xml", :layout => false
 
 ###
 # Compass
