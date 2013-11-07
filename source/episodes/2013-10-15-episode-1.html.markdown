@@ -1,0 +1,23 @@
+---
+title: Episode 1
+youtube_id: "k8b4qYEJEi8"
+date: 2013-10-15 17:57 UTC
+tags:
+---
+
+
+<span>In our premiere episode, we talk about Google's eventual takeover of everything, new sites that take storytelling to the next level, an awesome new browser-based game, Elon Musk and web tools you shouldn't work without.</span>
+
+READMORE
+
+### Show Notes
+[Google Calico]("http://googlepress.blogspot.com/2013/09/calico-announcement.html") Awesome WebGL & THREE.js browser-based wingsuit game you have to checkout.
+
+[MapDive]("http://mapdive.weareinstrument.com") Google's latest moonshot to take on death.
+
+[Pitchfork - Janelle Monae]("http://pitchfork.com/features/cover-story/reader/janelle-monae") Non-nannoying Y-Axis animations to bring an editorial article to life. See also: [WaPo Article]("http://www.washingtonpost.com/wp-srv/special/local/the-perils-of-great-falls/) & [NYT Article]("http://www.nytimes.com/projects/2012/snow-fall/#/?part=tunnel-creek")
+
+#### Tools
+[Frank De Loupe]("http://jumpzero.com/frank/") Color pick all the things. Instantly added to foreground in Photoshop and Hex or RBG code added to your clipboard.
+
+[Trello]("https://trello.com/") Organize anything easily with groups via all your devices.

@@ -1,5 +1,5 @@
 .hero-img {
-  height: 46em;
+  height: 48em;
 }
 
 div[role="main"] {
@@ -13,15 +13,16 @@ div[role="main"] {
     .current-episode-inner {
 
       > div.video {
-        width: 600px;
-        margin: 2em 0;
+        // width: 600px;
+        width: 50%;
+        // margin: 2em 0;
         float: left;
       }
 
       .video-meta {
         color: #fff;
         text-align: left;
-        width: 48%;
+        width: 50%;
         float: left;
         padding-left: 5%;
         margin-top: 1.5em;

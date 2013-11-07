@@ -24,8 +24,8 @@
     </script>
 
   </head>
-  <body class="<%= page_classes %>">
-    <div class="hero-img"></div>
+  <body class="<%= page_classes %> individual-episode">
+    <!-- <div class="hero-img"></div> -->
     <header>
       <a id="logo" href="/">Dt tv</a>
       <div class="connect">
@@ -38,16 +38,13 @@
     </header>
 
     <div role="main">
-
-      <h1>Hi. Welcome to DT tv.</h1>
-      <p class="sub-headline">It's like a happy hour conversation with design industry people</p>
-
-      <%= yield %>
-
-      <div class="show-meta clearfix container">
-        <h5>What is DT tv?</h5>
-        <p>Think of this show like your design industry Happy Hour. We'll be talking about anything you might find yourself talking about over drink at web conferences, breweries or your after work pub of choice. Tweet us <a href="http://twitter.com/DT_tv" target="_blank">@DT_tv</a> to let us know what you think or suggest topics for the show.</p>
-      </div>
+      <article class="container">
+        <div class="fve-video-wrapper">
+          <iframe width="100%" height="100%" src="https://www.youtube.com/embed/<%= current_page.data.youtube_id %>?wmode=transparent&amp;modestbranding=1&amp;autohide=1&amp;showinfo=0&amp;rel=0" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <h2><%= current_page.title %></h2>
+        <%= yield %>
+      </article>
 
     </div><!-- End role=main -->
 

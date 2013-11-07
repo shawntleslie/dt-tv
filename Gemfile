@@ -13,7 +13,11 @@ gem "wdm", "~> 0.1.0", :platforms => [:mswin, :mingw]
 # Get yet blog on y'all
 gem "middleman-blog"
 
-gem "middleman-deploy"
+gem "nokogiri"
+# gem "middleman-deploy"
+
+# Breakpoint for Mixin Media Queries
+gem "breakpoint"
 
 # Cross-templating language block fix for Ruby 1.8
 platforms :mri_18 do

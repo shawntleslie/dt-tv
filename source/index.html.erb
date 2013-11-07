@@ -4,40 +4,31 @@ title: Welcome to DT TV
       <section class="current-episode clearfix">
         <div class="current-episode-inner">
           <div class="video clearfix">
-            <iframe width="100%" height="100%" src="//www.youtube.com/embed/k8b4qYEJEi8?showinfo=0&rel=0" frameborder="0" allowfullscreen></iframe>
+            <div class="fve-video-wrapper">
+              <iframe width="100%" height="100%" src="https://www.youtube.com/embed/k8b4qYEJEi8?wmode=transparent&amp;modestbranding=1&amp;autohide=1&amp;showinfo=0&amp;rel=0" frameborder="0" allowfullscreen></iframe>
+            </div>
           </div>
           <div class="video-meta container">
             <p class="date">October 15, 2013</p>
-            <h2>Episode 1</h2>
-            <p class="episode-summary">In our premiere episode, we talk about Google's eventual takeover of everything, new sites that take storytelling to the next level, an awesome new browser-based game, Elon Musk and web tools you shouldn't work without.</p>
-            <a href="#" id="notes" data-default-text="Show Notes" data-hidden-text="Hide Notes"><i class="icon-file-text-alt"></i> <span>Show Notes</span></a>
+            <h2><%= link_to page_articles.first.title, page_articles.first %></h2>
+            <div class="episode-summary"><%= page_articles.first.summary %></div>
+            <i class="fa fa-file-text-o"></i> <%= link_to "#{page_articles.first.title} Show notes", page_articles.first %>
           </div>
         </div>
         <div class="clearfix"></div>
-        <div id="show-notes-container">
-          <div class="show-notes">
-            <h2>Show Notes</h2>
-            <a href="http://googlepress.blogspot.com/2013/09/calico-announcement.html" target="_blank">Google Calico</a>
-            <p>Google's latest moonshot to take on death.</p>
-            <a href="http://mapdive.weareinstrument.com" target="_blank">MapDive</a>
-            <p>Awesome WebGL &amp; THREE.js browser-based wingsuit game you have to checkout.</p>
-            <a href="http://pitchfork.com/features/cover-story/reader/janelle-monae/" target="_blank">Pitchfork - Janelle Monae</a>
-            <p>Non-nannoying Y-Axis animations to bring an editorial article to life. See also: <a href="http://www.washingtonpost.com/wp-srv/special/local/the-perils-of-great-falls/" target="_blank">WaPo Article</a> &amp; <a href="http://www.nytimes.com/projects/2012/snow-fall/#/?part=tunnel-creek">NYT Article</a></p>
-            <h3>Tools</h3>
-            <a href="http://jumpzero.com/frank/" target="_blank">Frank De Loupe</a>
-            <p>Color pick all the things. Instantly added to foreground in Photoshop and Hex or RBG code added to your clipboard.</p>
-            <a href="https://trello.com/" target="_blank">Trello</a>
-            <p>Organize anything easily with groups via all your devices.</p>
-          </div>
-        </div>
       </section>
 
-
-      <% page_articles.each_with_index do |article, i| %>
-        <p class="date"><%= article.date.strftime('%b %e %Y') %></p>
-        <h2><%= link_to article.title, article %></h2>
-        <!-- use article.summary(250) if you have Nokogiri available to show just
-        the first 250 characters -->
-        <%= article.summary %>
-        <%= link_to 'Read more…', article %>
-      <% end %>
+      <section class="past-episodes container">
+        <% page_articles.each_with_index do |article, i| %>
+          <% if i > 0 %>
+            <article>
+              <!-- <p class="date"><%= article.date.strftime('%b %e %Y') %></p> -->
+              <h3><%= link_to article.title, article %></h3>
+              <!-- use article.summary(250) if you have Nokogiri available to show just
+              the first 250 characters -->
+              <%= article.summary %>
+              <i class="fa fa-youtube-play fa fa-lg"></i> <%= link_to 'View Episode', article %>
+            </article>
+          <% end %>
+        <% end %>
+      </section>

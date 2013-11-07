@@ -20,8 +20,9 @@ a {
 
 h1 { font-size: 3.5em; color: #fff; }
 h2 { font-size: 3em; color: $headline; font-weight: 400; }
-h3 { font-size: 1.625em; text-transform: uppercase; color: $body-text; }
-h4 {}
+h3 { font-size: 2.5em; text-transform: uppercase; color: $headline; }
+h4 { font-size: 2em; text-transform: uppercase; color: $headline; }
+h5 { font-size: 1.25em; text-transform: uppercase; color: $strong-text }
 
 h1, h2, h3, h4, h5 {
   font-weight: 700;
@@ -52,7 +53,6 @@ header {
     text-align: right;
     margin-top: 1.5em;
 
-
     .yt-sub-wrap {
       margin-top: .5em;
       display: inline-block;
@@ -74,6 +74,7 @@ header {
       color: #fff;
       text-align: center;
       margin: 0 .75em 0 3.5%;
+      overflow: hidden;
 
       i {
         font-size: 32px;
@@ -104,8 +105,8 @@ div[role="main"] {
   }
 
   .current-episode {
-    background: #fff;
-    padding-top: 2em;
+    // background: #fff;
+    // padding-top: 2em;
     padding-bottom: 3em;
 
     .current-episode-inner {
@@ -113,11 +114,26 @@ div[role="main"] {
       overflow: hidden;
 
       > div.video {
-        width: 320px;
-        height: 180px;
-        background: #999;
         margin: 0 auto;
-        display: block;
+
+        .fve-video-wrapper {
+          position: relative;
+          overflow: hidden;
+          height: 0;
+          padding-bottom: 56.25%;
+          margin: 1.5em 0; /* A bit of margin at the bottom */
+
+          iframe,
+          object,
+          embed {
+            position: absolute;
+            display: block;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+          }
+        }
       }
 
       .video-meta {
@@ -137,22 +153,28 @@ div[role="main"] {
             color: $headline;
           }
         }
-        p.episode-summary {
-          line-height: 1.75em;
-          font-family: $serif;
-          margin: 0 0 2em;
+        .episode-summary {
+
+          p {
+
+            span {
+              line-height: 1.75em;
+              font-family: $serif;
+              margin: 0 0 2em;
+
+            }
+          }
+        }
+        i {
+          font-size: 30px;
+          vertical-align: middle;
+          margin-right: .25em;
+          color: $headline;
         }
         a {
           font-size: 1.125em;
           color: $link;
           text-transform: uppercase;
-
-          i {
-            font-size: 30px;
-            vertical-align: middle;
-            margin-right: .25em;
-            color: $headline;
-          }
         }
 
       }
@@ -185,7 +207,7 @@ div[role="main"] {
       transition: opacity 0.5s ease-in-out, visibility 0.5s linear 0s;
     }
 
-    h2 {
+    h3, h4 {
       text-transform: capitalize;
       font-weight: 600;
       border-bottom: 3px solid $headline;
@@ -224,6 +246,38 @@ div[role="main"] {
     }
   }
 
+  .past-episodes {
+
+    article {
+      padding: 1em 1.5em .75em;
+      background: #eaeef1;
+      overflow: hidden;
+      margin-bottom: 1.25em;
+
+      h3 {
+        margin: 0;
+
+      }
+      p {
+        font-family: $serif;
+        font-size: 1em;
+        line-height: 1.625em;
+        margin-top: .5em;
+
+        > a {
+          font-size: .875em;
+          text-transform: uppercase;
+          font-family: $sans-serif;
+          color: $body-text;
+        }
+      }
+
+      i {
+        color: $headline;
+        margin-right: .25em;
+      }
+    }
+  }
 }
 
 footer {
